@@ -65,7 +65,7 @@ module GeoRuby
 
       # Return the GPX file as LineString
       def as_line_string
-        GeoRuby::SimpleFeatures::LineString.from_points(@points)
+        GeoRuby::SimpleFeatures::LineString.from_points(@points, 4326, true)
       end
       alias_method :as_polyline, :as_line_string
 
